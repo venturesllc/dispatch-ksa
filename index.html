@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WayBetter Dispatch: Saudi Arabia</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#101215;color:#EDEEF0;padding:32px 18px;line-height:1.5}
+.wrap{max-width:780px;margin:0 auto}
+h1{font-size:1.55rem;margin-bottom:6px}
+.sub{color:#9AA0A8;font-size:.92rem;margin-bottom:10px}
+.rules{background:#1A1D22;border:1px solid #2A2E35;border-radius:12px;padding:14px 18px;font-size:.88rem;color:#C6CAD0;margin-bottom:20px}
+.rules b{color:#fff}
+.acct{display:flex;flex-wrap:wrap;gap:8px;margin-top:11px}
+.acct label{display:flex;align-items:center;gap:7px;background:#101215;border:1px solid #2A2E35;padding:9px 15px;border-radius:8px;cursor:pointer;font-size:.87rem;font-weight:600}
+.acct label:has(input:checked){border-color:#3A6BD6;background:#16213A;color:#fff}
+.acct input{accent-color:#3A6BD6;cursor:pointer}
+.tick{display:flex;align-items:center;gap:11px;cursor:pointer}
+.tick input{width:19px;height:19px;accent-color:#2E7D46;cursor:pointer;flex:none}
+.card.sent{opacity:.44}
+.card.sent .tick span{text-decoration:line-through;color:#8A9099}
+#done{color:#63C083;font-weight:800}
+.section-h{font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#7F8792;margin:30px 0 14px}
+.card{background:#1A1D22;border:1px solid #2A2E35;border-radius:14px;padding:22px;margin-bottom:22px}
+.card-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}
+h2{font-size:1.1rem}
+.prev{color:#7FB2FF;font-size:.85rem;text-decoration:none;white-space:nowrap}
+.meta div{display:flex;gap:10px;padding:7px 0;border-bottom:1px solid #24272D;font-size:.92rem;flex-wrap:wrap}
+.meta span{color:#8A9099;font-size:.72rem;font-weight:800;letter-spacing:.08em;min-width:64px;padding-top:2px}
+.sel{user-select:all;font-weight:600;word-break:break-all}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.b{display:inline-flex;align-items:center;padding:12px 16px;border-radius:9px;font-weight:700;font-size:.9rem;text-decoration:none;border:0;cursor:pointer;color:#fff;font-family:inherit}
+.b-copy{background:#2E7D46}
+.gm{background:#3A6BD6}
+.b-wa{background:#1FA855}
+.b-dis{background:#2A2E35;color:#8A9099;cursor:default}
+.b-copy.ok{background:#1B5E30}
+.hint{font-size:.8rem;color:#8A9099;margin-top:12px}
+.src{position:absolute;left:-9999px;top:0}
+details{margin-top:14px}
+summary{cursor:pointer;font-size:.85rem;color:#9AA0A8}
+.preview{background:#fff;color:#222;border-radius:10px;padding:18px;margin-top:10px;font-family:Arial,sans-serif;font-size:14px;line-height:1.55}
+.preview p{margin-bottom:12px}
+.footer{color:#5C636C;font-size:.8rem;margin-top:30px;text-align:center;line-height:1.8}
+</style></head><body><div class="wrap">
+<h1>WayBetter Dispatch: Saudi Arabia</h1>
+<p class="sub">8 med spa / clinic pitches, Riyadh &amp; Jeddah. Short pitch, no price, no deadline. Just the link.</p>
+<div class="rules" style="border-color:#3A6BD6">
+<b>Which Gmail are you sending from?</b> Pick it here first and every "Open Gmail compose" button below opens in that account.
+<div class="acct">
+  <label><input type="radio" name="acct" value="0" onchange="setAcct(0)" checked> Account 1</label>
+  <label><input type="radio" name="acct" value="1" onchange="setAcct(1)"> Account 2</label>
+  <label><input type="radio" name="acct" value="2" onchange="setAcct(2)"> Account 3</label>
+</div>
+</div>
+<div class="rules" style="border-color:#2E7D46">Tick each one off as you send it. Saved in this browser. <b><span id="done">0</span> of 8 sent.</b> <button onclick="resetAll()" style="background:none;border:1px solid #3A3E45;color:#8A9099;padding:5px 12px;border-radius:6px;cursor:pointer;font-family:inherit;font-size:.8rem;margin-left:8px">Reset</button></div>
+<div class="section-h">Email pitches (6)</div>
+
+<div class="card" id="aura-centers">
+  <div class="card-head">
+    <h2><label class="tick"><input type="checkbox" data-slug="aura-centers" onchange="mark(this)"> <span>Aura Centers &middot; Jeddah</span></label></h2>
+    <a class="prev" href="https://auracenters.waybetter.agency" target="_blank">preview site &#8599;</a>
+  </div>
+  <div class="meta">
+    <div><span>TO</span><b class="sel">info@auracenters.com</b></div>
+    <div><span>SUBJECT</span><b class="sel">I fixed your website</b></div>
+  </div>
+  <div class="btns">
+    <button class="b b-copy" onclick="copyRich('aura-centers')">1. Copy email (formatted)</button>
+    <a class="b gm" target="_blank" data-q="view=cm&fs=1&to=info@auracenters.com&su=I%20fixed%20your%20website" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@auracenters.com&su=I%20fixed%20your%20website">2. Open Gmail compose</a>
+    <span class="b b-dis">No WhatsApp published</span>
+  </div>
+  <div class="hint">Click 1 &rarr; click 2 (To + Subject filled) &rarr; paste in the body &rarr; Send. Then 3 after ~10 min.</div>
+  <div class="src" id="src-aura-centers"><p>Hi Nahla,</p>
+<p>Your club looks incredible and your website looks like a free Webflow template nobody finished editing. It still says "Get This Template" in the code.</p>
+<p>So I rebuilt it. It is already live:</p>
+<p><a href="https://auracenters.waybetter.agency"><b>https://auracenters.waybetter.agency</b></a></p>
+<p>Twenty seconds on your phone. Your own photos, Arabic and English, and it actually works on a phone.</p>
+<p>If you like it, reply to this email and it's yours.</p>
+<p>If you hate it, pretend this never happened and I'll never speak of it again.</p>
+<p>Mohamed<br>
+waybetter.agency</p></div>
+  <details><summary>Preview the email text</summary><div class="preview"><p>Hi Nahla,</p>
+<p>Your club looks incredible and your website looks like a free Webflow template nobody finished editing. It still says "Get This Template" in the code.</p>
+<p>So I rebuilt it. It is already live:</p>
+<p><a href="https://auracenters.waybetter.agency"><b>https://auracenters.waybetter.agency</b></a></p>
+<p>Twenty seconds on your phone. Your own photos, Arabic and English, and it actually works on a phone.</p>
+<p>If you like it, reply to this email and it's yours.</p>
+<p>If you hate it, pretend this never happened and I'll never speak of it again.</p>
+<p>Mohamed<br>
+waybetter.agency</p></div></details>
+</div>
+
+<div class="card" id="biolife-clinic">
+  <div class="card-head">
+    <h2><label class="tick"><input type="checkbox" data-slug="biolife-clinic" onchange="mark(this)"> <span>Biolife Clinic &middot; Jeddah</span></label></h2>
+    <a class="prev" href="https://biolife.waybetter.agency" target="_blank">preview site &#8599;</a>
+  </div>
+  <div class="meta">
+    <div><span>TO</span><b class="sel">info@biolifeclinic.sa</b></div>
+    <div><span>SUBJECT</span><b class="sel">your website needs botox</b></div>
+  </div>
+  <div class="btns">
+    <button class="b b-copy" onclick="copyRich('biolife-clinic')">1. Copy email (formatted)</button>
+    <a class="b gm" target="_blank" data-q="view=cm&fs=1&to=info@biolifeclinic.sa&su=your%20website%20needs%20botox" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@biolifeclinic.sa&su=your%20website%20needs%20botox">2. Open Gmail compose</a>
+    <a class="b b-wa" target="_blank" href="https://wa.me/966552304433?text=Hi%2C%20just%20emailed%20you%20something%20I%20built%20for%20Biolife%20Clinic.%20Worth%20a%20look%20when%20you%20get%20a%20minute%3A%20https%3A//biolife.waybetter.agency">3. WhatsApp follow-up</a>
+  </div>
+  <div class="hint">Click 1 &rarr; click 2 (To + Subject filled) &rarr; paste in the body &rarr; Send. Then 3 after ~10 min.</div>
+  <div class="src" id="src-biolife-clinic"><p>Hi,</p>
+<p>2,040 reviews, nine specialties, CBAHI accredited, and your contact page shows blank where the phone and email should be.</p>
+<p>So I rebuilt it. It is already live:</p>
+<p><a href="https://biolife.waybetter.agency"><b>https://biolife.waybetter.agency</b></a></p>
+<p>Twenty seconds on your phone. Your doctors, your certificate, Arabic and English, and a contact page that actually works.</p>
+<p>If you like it, reply to this email or message me on WhatsApp and it's yours.</p>
+<p>If you hate it, pretend this never happened and I'll never speak of it again.</p>
+<p>Mohamed<br>
+waybetter.agency</p></div>
+  <details><summary>Preview the email text</summary><div class="preview"><p>Hi,</p>
+<p>2,040 reviews, nine specialties, CBAHI accredited, and your contact page shows blank where the phone and email should be.</p>
+<p>So I rebuilt it. It is already live:</p>
+<p><a href="https://biolife.waybetter.agency"><b>https://biolife.waybetter.agency</b></a></p>
+<p>Twenty seconds on your phone. Your doctors, your certificate, Arabic and English, and a contact page that actually works.</p>
+<p>If you like it, reply to this email or message me on WhatsApp and it's yours.</p>
+<p>If you hate it, pretend this never happened and I'll never speak of it again.</p>
+<p>Mohamed<br>
+waybetter.agency</p></div></details>
+</div>
+
+<div class="card" id="noya-clinic">
+  <div class="card-head">
+    <h2><label class="tick"><input type="checkbox" data-slug="noya-clinic" onchange="mark(this)"> <span>NOYA Clinic &middot; Riyadh</span></label></h2>
+    <a class="prev" href="https://noyaclinic.waybetter.agency" target="_blank">preview site &#8599;</a>
+  </div>
+  <div class="meta">
+    <div><span>TO</span><b class="sel">info@noyaclinic.sa</b></div>
+    <div><span>SUBJECT</span><b class="sel">I fixed your website</b></div>
+  </div>
+  <div class="btns">
+    <button class="b b-copy" onclick="copyRich('noya-clinic')">1. Copy email (formatted)</button>
+    <a class="b gm" target="_blank" data-q="view=cm&fs=1&to=info@noyaclinic.sa&su=I%20fixed%20your%20website" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@noyaclinic.sa&su=I%20fixed%20your%20website">2. Open Gmail compose</a>
+    <span class="b b-dis">No WhatsApp published</span>
+  </div>
+  <div class="hint">Click 1 &rarr; click 2 (To + Subject filled) &rarr; paste in the body &rarr; Send. Then 3 after ~10 min.</div>
+  <div class="src" id="src-noya-clinic"><p>Hi,</p>
+<p>Your building looks better than every stock photo on your website, and your booking form says "No Fields Found."</p>
+<p>So I rebuilt it. It is already live:</p>
+<p><a href="https://noyaclinic.waybetter.agency"><b>https://noyaclinic.waybetter.agency</b></a></p>
+<p>Twenty seconds on your phone. Your actual building, Arabic and English, and a form that works.</p>
+<p>If you like it, reply to this email and it's yours.</p>
+<p>If you hate it, pretend this never happened and I'll never speak of it again.</p>
+<p>Mohamed<br>
+waybetter.agency</p></div>
+  <details><summary>Preview the email text</summary><div class="preview"><p>Hi,</p>
+<p>Your building looks better than every stock photo on your website, and your booking form says "No Fields Found."</p>
+<p>So I rebuilt it. It is already live:</p>
+<p><a href="https://noyaclinic.waybetter.agency"><b>https://noyaclinic.waybetter.agency</b></a></p>
+<p>Twenty seconds on your phone. Your actual building, Arabic and English, and a form that works.</p>
+<p>If you like it, reply to this email and it's yours.</p>
+<p>If you hate it, pretend this never happened and I'll never speak of it again.</p>
+<p>Mohamed<br>
+waybetter.agency</p></div></details>
+</div>
+
+<div class="card" id="escape-spa">
+  <div class="card-head">
+    <h2><label class="tick"><input type="checkbox" data-slug="escape-spa" onchange="mark(this)"> <span>Escape Spa &middot; Riyadh</span></label></h2>
+    <a class="prev" href="https://escapespa.waybetter.agency" target="_blank">preview site &#8599;</a>
+  </div>
+  <div class="meta">
+    <div><span>TO</span><b class="sel">info@escapespa.sa</b></div>
+    <div><span>SUBJECT</span><b class="sel">I fixed your website</b></div>
+  </div>
+  <div class="btns">
+    <button class="b b-copy" onclick="copyRich('escape-spa')">1. Copy email (formatted)</button>
+    <a class="b gm" target="_blank" data-q="view=cm&fs=1&to=info@escapespa.sa&su=I%20fixed%20your%20website" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@escapespa.sa&su=I%20fixed%20your%20website">2. Open Gmail compose</a>
+    <span class="b b-dis">No WhatsApp published</span>
+  </div>
+  <div class="hint">Click 1 &rarr; click 2 (To + Subject filled) &rarr; paste in the body &rarr; Send. Then 3 after ~10 min.</div>
+  <div class="src" id="src-escape-spa"><p>Hi,</p>
+<p>1,209 reviews, five branches, and your website has been a dead Wix error page for a while now.</p>
+<p>So I rebuilt it. It is already live:</p>
+<p><a href="https://escapespa.waybetter.agency"><b>https://escapespa.waybetter.agency</b></a></p>
+<p>Twenty seconds on your phone. Your reception, your services, Arabic and English.</p>
+<p>If you like it, reply to this email and it's yours.</p>
+<p>If you hate it, pretend this never happened and I'll never speak of it again.</p>
+<p>Mohamed<br>
+waybetter.agency</p></div>
+  <details><summary>Preview the email text</summary><div class="preview"><p>Hi,</p>
+<p>1,209 reviews, five branches, and your website has been a dead Wix error page for a while now.</p>
+<p>So I rebuilt it. It is already live:</p>
+<p><a href="https://escapespa.waybetter.agency"><b>https://escapespa.waybetter.agency</b></a></p>
+<p>Twenty seconds on your phone. Your reception, your services, Arabic and English.</p>
+<p>If you like it, reply to this email and it's yours.</p>
+<p>If you hate it, pretend this never happened and I'll never speak of it again.</p>
+<p>Mohamed<br>
+waybetter.agency</p></div></details>
+</div>
+
+<div class="card" id="eve-jeddah">
+  <div class="card-head">
+    <h2><label class="tick"><input type="checkbox" data-slug="eve-jeddah" onchange="mark(this)"> <span>EVE Jeddah &middot; Jeddah</span></label></h2>
+    <a class="prev" href="https://evejeddah.waybetter.agency" target="_blank">preview site &#8599;</a>
+  </div>
+  <div class="meta">
+    <div><span>TO</span><b class="sel">info@evejeddah.com</b></div>
+    <div><span>SUBJECT</span><b class="sel">your website needs botox</b></div>
+  </div>
+  <div class="btns">
+    <button class="b b-copy" onclick="copyRich('eve-jeddah')">1. Copy email (formatted)</button>
+    <a class="b gm" target="_blank" data-q="view=cm&fs=1&to=info@evejeddah.com&su=your%20website%20needs%20botox" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@evejeddah.com&su=your%20website%20needs%20botox">2. Open Gmail compose</a>
+    <span class="b b-dis">No WhatsApp published</span>
+  </div>
+  <div class="hint">Click 1 &rarr; click 2 (To + Subject filled) &rarr; paste in the body &rarr; Send. Then 3 after ~10 min.</div>
+  <div class="src" id="src-eve-jeddah"><p>Hi,</p>
+<p>Sixty thousand clients since 1988 and your website doesn't even have HTTPS. Chrome tells every visitor it's not secure before they see a single photo.</p>
+<p>So I rebuilt it. It is already live:</p>
+<p><a href="https://evejeddah.waybetter.agency"><b>https://evejeddah.waybetter.agency</b></a></p>
+<p>Twenty seconds on your phone. Your photos, your history, Arabic and English, actually works on a phone.</p>
+<p>If you like it, reply to this email and it's yours.</p>
+<p>If you hate it, pretend this never happened and I'll never speak of it again.</p>
+<p>Mohamed<br>
+waybetter.agency</p></div>
+  <details><summary>Preview the email text</summary><div class="preview"><p>Hi,</p>
+<p>Sixty thousand clients since 1988 and your website doesn't even have HTTPS. Chrome tells every visitor it's not secure before they see a single photo.</p>
+<p>So I rebuilt it. It is already live:</p>
+<p><a href="https://evejeddah.waybetter.agency"><b>https://evejeddah.waybetter.agency</b></a></p>
+<p>Twenty seconds on your phone. Your photos, your history, Arabic and English, actually works on a phone.</p>
+<p>If you like it, reply to this email and it's yours.</p>
+<p>If you hate it, pretend this never happened and I'll never speak of it again.</p>
+<p>Mohamed<br>
+waybetter.agency</p></div></details>
+</div>
+
+<div class="card" id="sculpto-studio">
+  <div class="card-head">
+    <h2><label class="tick"><input type="checkbox" data-slug="sculpto-studio" onchange="mark(this)"> <span>Sculptō Studio &middot; Riyadh</span></label></h2>
+    <a class="prev" href="https://sculpto.waybetter.agency" target="_blank">preview site &#8599;</a>
+  </div>
+  <div class="meta">
+    <div><span>TO</span><b class="sel">hello@sculptostudio.com</b></div>
+    <div><span>SUBJECT</span><b class="sel">your website has a problem</b></div>
+  </div>
+  <div class="btns">
+    <button class="b b-copy" onclick="copyRich('sculpto-studio')">1. Copy email (formatted)</button>
+    <a class="b gm" target="_blank" data-q="view=cm&fs=1&to=hello@sculptostudio.com&su=your%20website%20has%20a%20problem" href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@sculptostudio.com&su=your%20website%20has%20a%20problem">2. Open Gmail compose</a>
+    <a class="b b-wa" target="_blank" href="https://wa.me/966538091090?text=Hi%2C%20just%20emailed%20you%20something%20I%20built%20for%20Sculpt%C5%8D%20Studio.%20Worth%20a%20look%20when%20you%20get%20a%20minute%3A%20https%3A//sculpto.waybetter.agency">3. WhatsApp follow-up</a>
+  </div>
+  <div class="hint">Click 1 &rarr; click 2 (To + Subject filled) &rarr; paste in the body &rarr; Send. Then 3 after ~10 min.</div>
+  <div class="src" id="src-sculpto-studio"><p>Hi,</p>
+<p>Your studio looks incredible and your website has been selling Viagra and fake designer bags since May. Somebody hacked it and nobody noticed.</p>
+<p>So I rebuilt it. It is already live:</p>
+<p><a href="https://sculpto.waybetter.agency"><b>https://sculpto.waybetter.agency</b></a></p>
+<p>Twenty seconds on your phone. Your own photos, Arabic and English, and nothing selling Ozempic in the background.</p>
+<p>If you like it, message me on WhatsApp and it's yours.</p>
+<p>If you hate it, pretend this never happened and I'll never speak of it again.</p>
+<p>Mohamed<br>
+waybetter.agency</p></div>
+  <details><summary>Preview the email text</summary><div class="preview"><p>Hi,</p>
+<p>Your studio looks incredible and your website has been selling Viagra and fake designer bags since May. Somebody hacked it and nobody noticed.</p>
+<p>So I rebuilt it. It is already live:</p>
+<p><a href="https://sculpto.waybetter.agency"><b>https://sculpto.waybetter.agency</b></a></p>
+<p>Twenty seconds on your phone. Your own photos, Arabic and English, and nothing selling Ozempic in the background.</p>
+<p>If you like it, message me on WhatsApp and it's yours.</p>
+<p>If you hate it, pretend this never happened and I'll never speak of it again.</p>
+<p>Mohamed<br>
+waybetter.agency</p></div></details>
+</div>
+<div class="section-h">WhatsApp only, no email published (2)</div>
+
+<div class="card" id="mozdanh">
+  <div class="card-head">
+    <h2><label class="tick"><input type="checkbox" data-slug="mozdanh" onchange="mark(this)"> <span>Mozdanh Clinics &middot; Riyadh</span></label></h2>
+    <a class="prev" href="https://mozdanh.waybetter.agency" target="_blank">preview site &#8599;</a>
+  </div>
+  <div class="meta">
+    <div><span>TO</span><b style="color:#E0A33C">No email published. WhatsApp only, in Arabic.</b></div>
+  </div>
+  <div class="btns">
+    <a class="b b-wa" style="flex:1" target="_blank" href="https://wa.me/966504699917?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D9%85%D9%88%D9%82%D8%B9%D9%83%D9%85%20%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%20%D9%85%D8%A7%D9%8A%D9%81%D8%AA%D8%AD%D8%B4%20%D8%AE%D8%A7%D9%84%D8%B5%20%D9%85%D9%86%20%D8%B4%D9%87%D9%88%D8%B1%20%D9%88%2086%20%D8%A7%D9%84%D9%81%20%D9%85%D8%AA%D8%A7%D8%A8%D8%B9%20%D9%81%D8%A7%D9%86%D8%B3%D8%AA%D9%82%D8%B1%D8%A7%D9%85%20%D9%85%D8%A7%D9%8A%D8%B9%D8%B1%D9%81%D9%88%D8%B4.%20%D8%B3%D9%88%D9%8A%D8%AA%20%D9%84%D9%83%D9%85%20%D9%85%D9%88%D9%82%D8%B9%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D8%A8%D8%A7%D8%B4%20%D8%AA%D8%B4%D9%88%D9%81%D9%88%D9%87%3A%20https%3A//mozdanh.waybetter.agency%20%D9%84%D9%88%20%D8%B9%D8%AC%D8%A8%D9%83%D9%85%20%D8%B1%D8%AF%D9%88%D8%A7%20%D8%B9%D9%84%D9%8A%20%D9%87%D9%86%D8%A7.%20%D9%84%D9%88%20%D9%85%D8%A7%20%D8%B9%D8%AC%D8%A8%D9%83%D9%85%D8%B4%D8%8C%20%D8%A5%D9%86%D8%B3%D9%88%D8%A7%20%D8%A7%D9%84%D9%85%D9%88%D8%B6%D9%88%D8%B9%20%D9%88%D9%85%D8%A7%20%D8%B1%D8%A7%D8%AD%20%D8%A3%D8%B1%D8%AC%D8%B9%20%D8%A3%D8%B2%D8%B9%D8%AC%D9%83%D9%85.">Open WhatsApp with message ready</a>
+  </div>
+  <div class="hint">Click the button, review the message, hit send in WhatsApp.</div>
+  <details><summary>Preview the WhatsApp message</summary><div class="preview" dir="rtl" style="text-align:right;font-family:Tahoma,Arial,sans-serif">مرحبا، موقعكم الالكتروني مايفتحش خالص من شهور و 86 الف متابع فانستقرام مايعرفوش. سويت لكم موقع جديد باش تشوفوه: https://mozdanh.waybetter.agency لو عجبكم ردوا علي هنا. لو ما عجبكمش، إنسوا الموضوع وما راح أرجع أزعجكم.</div></details>
+</div>
+
+<div class="card" id="alma-beauty">
+  <div class="card-head">
+    <h2><label class="tick"><input type="checkbox" data-slug="alma-beauty" onchange="mark(this)"> <span>Alma Beauty Center &middot; Riyadh</span></label></h2>
+    <a class="prev" href="https://almabeauty.waybetter.agency" target="_blank">preview site &#8599;</a>
+  </div>
+  <div class="meta">
+    <div><span>TO</span><b style="color:#E0A33C">No email published. WhatsApp only, in Arabic.</b></div>
+  </div>
+  <div class="btns">
+    <a class="b b-wa" style="flex:1" target="_blank" href="https://wa.me/0507226630?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%B9%D9%86%D8%AF%D9%83%D9%85%20%D9%A8%D9%A2%D9%A4%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%81%D9%8A%20%D9%82%D9%88%D9%82%D9%84%20%D9%88%D9%85%D8%A7%20%D8%B9%D9%86%D8%AF%D9%83%D9%85%D8%B4%20%D9%85%D9%88%D9%82%D8%B9%20%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%20%D8%AE%D8%A7%D9%84%D8%B5.%20%D8%B3%D9%88%D9%8A%D8%AA%20%D9%84%D9%83%D9%85%20%D9%88%D8%A7%D8%AD%D8%AF%20%D8%A8%D8%A7%D8%B4%20%D8%AA%D8%B4%D9%88%D9%81%D9%88%D9%87%3A%20https%3A//almabeauty.waybetter.agency%20%D9%84%D9%88%20%D8%B9%D8%AC%D8%A8%D9%83%D9%85%20%D8%B1%D8%AF%D9%88%D8%A7%20%D8%B9%D9%84%D9%8A%20%D9%87%D9%86%D8%A7.%20%D9%84%D9%88%20%D9%85%D8%A7%20%D8%B9%D8%AC%D8%A8%D9%83%D9%85%D8%B4%D8%8C%20%D8%A5%D9%86%D8%B3%D9%88%D8%A7%20%D8%A7%D9%84%D9%85%D9%88%D8%B6%D9%88%D8%B9%20%D9%88%D9%85%D8%A7%20%D8%B1%D8%A7%D8%AD%20%D8%A3%D8%B1%D8%AC%D8%B9%20%D8%A3%D8%B2%D8%B9%D8%AC%D9%83%D9%85.">Open WhatsApp with message ready</a>
+  </div>
+  <div class="hint">Click the button, review the message, hit send in WhatsApp.</div>
+  <details><summary>Preview the WhatsApp message</summary><div class="preview" dir="rtl" style="text-align:right;font-family:Tahoma,Arial,sans-serif">مرحبا، عندكم ٨٢٤ تقييم في قوقل وما عندكمش موقع الكتروني خالص. سويت لكم واحد باش تشوفوه: https://almabeauty.waybetter.agency لو عجبكم ردوا علي هنا. لو ما عجبكمش، إنسوا الموضوع وما راح أرجع أزعجكم.</div></details>
+</div>
+<div class="footer">All new market: Riyadh &amp; Jeddah, med spas / clinics / studios.</div>
+</div>
+<script>
+async function copyRich(slug){
+  const el=document.getElementById('src-'+slug);
+  const html=el.innerHTML, text=el.innerText;
+  try{
+    await navigator.clipboard.write([new ClipboardItem({
+      'text/html':new Blob([html],{type:'text/html'}),
+      'text/plain':new Blob([text],{type:'text/plain'})
+    })]);
+  }catch(e){
+    const r=document.createRange();r.selectNodeContents(el);
+    const s=getSelection();s.removeAllRanges();s.addRange(r);
+    document.execCommand('copy');s.removeAllRanges();
+  }
+  const btn=document.querySelector('#'+slug+' .b-copy');
+  btn.textContent='Copied \u2713';btn.classList.add('ok');
+  setTimeout(()=>{btn.textContent='1. Copy email (formatted)';btn.classList.remove('ok')},2500);
+}
+function setAcct(n){
+  try{ localStorage.setItem('wb_acct_ksa',n) }catch(e){}
+  document.querySelectorAll('a.gm').forEach(function(a){
+    a.href='https://mail.google.com/mail/u/'+n+'/?'+a.dataset.q;
+  });
+}
+(function(){
+  var n=0;
+  try{ n=parseInt(localStorage.getItem('wb_acct_ksa')||'0',10)||0 }catch(e){}
+  var r=document.querySelector('.acct input[value="'+n+'"]');
+  if(r) r.checked=true;
+  setAcct(n);
+})();
+function store(){ try{ return JSON.parse(localStorage.getItem('wb_sent_ksa')||'{}') }catch(e){ return {} } }
+function save(o){ try{ localStorage.setItem('wb_sent_ksa',JSON.stringify(o)) }catch(e){} }
+function count(){
+  var n=document.querySelectorAll('.card.sent').length;
+  var el=document.getElementById('done'); if(el) el.textContent=n;
+}
+function mark(cb){
+  var o=store();
+  if(cb.checked){ o[cb.dataset.slug]=1 } else { delete o[cb.dataset.slug] }
+  save(o);
+  cb.closest('.card').classList.toggle('sent',cb.checked);
+  count();
+}
+function resetAll(){
+  save({});
+  document.querySelectorAll('.card input[type=checkbox]').forEach(function(cb){
+    cb.checked=false; cb.closest('.card').classList.remove('sent');
+  });
+  count();
+}
+(function(){
+  var o=store();
+  document.querySelectorAll('.card input[type=checkbox]').forEach(function(cb){
+    if(o[cb.dataset.slug]){ cb.checked=true; cb.closest('.card').classList.add('sent') }
+  });
+  count();
+})();
+</script>
+</body></html>
